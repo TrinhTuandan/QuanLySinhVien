@@ -213,7 +213,10 @@ namespace Lab02_02
         // Thoát Khỏi Form
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có muốn Thoát không", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }    
     }
 }
